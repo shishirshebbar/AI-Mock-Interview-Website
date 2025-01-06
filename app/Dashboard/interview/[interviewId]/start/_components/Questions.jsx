@@ -16,7 +16,7 @@ function Questions({ mockquestion,activequestionindex }) {
     }
     return mockquestion&&(
       <div className="p-5 border rounded-lg my-10">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7 ">
           {questions.length > 0 ? (
             questions.map((question, index) => (
               <div key={index} >
@@ -37,7 +37,7 @@ function Questions({ mockquestion,activequestionindex }) {
         <Volume2 onClick={()=>textToSpeech(mockquestion[activequestionindex]?.question)}
           className='cursor-pointer'
           />
-          <div className='border rounded-lg p-5 bg-zinc-400 mt-20'>
+          <div className='border rounded-lg p-5 bg-zinc-400  mt-10'>
           <h2 className='flex gap-2 items-center text-blue-700'>
             <Lightbulb/>
             <strong>Note:</strong>

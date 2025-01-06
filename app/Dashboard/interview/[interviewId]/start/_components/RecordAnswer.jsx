@@ -5,9 +5,11 @@ import React, { useEffect, useState } from 'react'
 import Webcam from 'react-webcam'
 import useSpeechToText from 'react-hook-speech-to-text';
 import { Mic } from 'lucide-react'
+import { toast } from 'sonner'
+import { chatSession } from '@/utils/GeminiAI'
 
 
-function RecordAnswer() {
+function RecordAnswer({ mockquestion,activequestionindex }) {
     const [useranswer,setuseranswer] = useState('');
 
     const {
@@ -27,7 +29,29 @@ function RecordAnswer() {
             setuseranswer(prevAns=>prevAns+result?.transcript)
         })
 
-      },[results])
+      },[results]);
+
+      const SaveUserAnswer =async ()=>{
+        if(isRecording){
+            stopSpeechToText()
+            if(useranswer?.length<10){
+                toast('error occured.try again...')
+                return
+            }
+            const feedback = "Question: " + mockquestion[activequestionindex]?.question + 
+            ", User Answer: " + useranswer + 
+            ", Depending on the question and user answer please provide rating for user answer and feedback for improvement in just 5 lines in JSON Format with rating field and feedback field";
+            const result = await chatSession.sendMessage(feedback)
+            const jsonmockresp = (result.response.text()).replace(/```json/, '')
+            .replace(/```/, '')
+            .trim();
+            console.log(jsonmockresp);
+            
+   }
+        else{
+            startSpeechToText()
+        }
+      }
 
   return (
     <div className='flex items-center justify-center flex-col'>
@@ -48,7 +72,7 @@ function RecordAnswer() {
     <div className="my-10 mt-7 mb-0 ">
 
           <Button className="w-48"
-          onClick={isRecording?stopSpeechToText:startSpeechToText}
+          onClick={SaveUserAnswer}
           >
             {isRecording?
             <h2 className='text-red-100 flex gap-2'>
