@@ -3,7 +3,8 @@ import { Button } from '@/components/ui/button';
 import { db } from '@/utils/database';
 import { MockAI } from '@/utils/dbschema';
 import { eq } from 'drizzle-orm';
-import { WebcamIcon } from 'lucide-react';
+import { Lightbulb, WebcamIcon } from 'lucide-react';
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import Webcam from 'react-webcam';
 
@@ -59,7 +60,8 @@ function Interview({ params }) {
           </div>
           <div className='p-5 rounded-lg border bg-yellow-200 border-yellow-300'>
             <h2  className='flex gap-2 items-center text-yellow-900'>
-              <strong>Notice</strong></h2>
+              <Lightbulb/>
+              <strong>Note: </strong></h2>
               <h2 className='mt-3 text-yellow-700'>Enable webcam and microphone to start your AI-powered mock interview. Practice your interview skills with real-time feedback and analysis. Get personalized insights to improve your answers and body language. Simulate various interview scenarios tailored to your job role. Gain confidence with our AI-driven performance metrics. Enhance your preparation with industry-specific mock interviews.</h2>
 
             
@@ -79,7 +81,7 @@ function Interview({ params }) {
         ) : (
           <>
             <WebcamIcon className="bg-secondary rounded-lg border-black-900 p-20 w-full h-80 my-5" />
-            <Button  className="text-black w-full my-5" onClick={() => setWebcamenable(true)}>
+            <Button  className=" font-bold w-full my-5" onClick={() => setWebcamenable(true)}>
               Enable web cam and microphone
             </Button>
           </>
@@ -89,9 +91,12 @@ function Interview({ params }) {
 
     </div>
     <div className='flex justify-end items-end'>
-    <Button>
+   <Link href={'/Dashboard/interview/'+params.interviewId+'/start'}>    
+   <Button>
       Start Interview
     </Button>
+    </Link>
+
     </div>
     </div>
   );
