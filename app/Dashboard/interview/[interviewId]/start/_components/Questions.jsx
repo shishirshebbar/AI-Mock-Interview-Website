@@ -42,8 +42,8 @@ function Questions({ mockquestion,activequestionindex }) {
             <Lightbulb/>
             <strong>Note:</strong>
           </h2>
-          <h2 className="text-sm text-primary my-2">
-          Click the "Record Answer" button when you're ready to respond to the question. At the end, you'll receive detailed feedback, including the correct answers and your responses, allowing you to compare and learn effectively.
+          <h2 className="text-sm text-primary my-2"><strong>Make sure to enbale permissions for camera and microphone in the settings.</strong></h2>
+          <h2  className="text-sm text-primary my-2">Click the "Record Answer" button when you're ready to respond to the question. At the end, you'll receive detailed feedback, including the correct answers and your responses, allowing you to compare and learn effectively.
         </h2>
 
           </div>
