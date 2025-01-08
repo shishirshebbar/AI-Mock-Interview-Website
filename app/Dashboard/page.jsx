@@ -1,6 +1,7 @@
 import { UserButton } from '@clerk/nextjs'
 import React from 'react'
 import Addnewinterview from './_components/Addnewinterview'
+import Interviewlist from './_components/Interviewlist'
 
 function Dashboard() {
   return (
@@ -12,7 +13,7 @@ function Dashboard() {
         <Addnewinterview/>
       </div>
     
-    
+      <Interviewlist/>
     </div>
   )
 }
