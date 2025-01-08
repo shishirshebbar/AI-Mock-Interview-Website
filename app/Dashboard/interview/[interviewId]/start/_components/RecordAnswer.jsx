@@ -23,6 +23,7 @@ function RecordAnswer({ mockquestion,activequestionindex ,interviewdata}) {
         results,
         startSpeechToText,
         stopSpeechToText,
+        setResults
       } = useSpeechToText({
         continuous: true,
         useLegacyResults: false
@@ -89,8 +90,11 @@ function RecordAnswer({ mockquestion,activequestionindex ,interviewdata}) {
             })
             if(resp){
               toast('user recorded successfully')
+              setuseranswer('');
+              setResults([]);
             }
-            setuseranswer('');
+            setResults([]);
+            
             setloading(false);
 
 
