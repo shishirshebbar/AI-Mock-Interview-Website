@@ -52,7 +52,8 @@ function StartInterview({ params }) {
         />
       </div>
       <div className="flex justify-end gap-6 mr-20">
-  {activequestionindex>0&&<Button>Previous Question</Button>}
+  {activequestionindex>0&&<Button onClick={()=>setactivequestionindex(activequestionindex-1)}
+  >Previous Question</Button>}
   {activequestionindex!=mockquestion?.length-1&&<Button
   onClick={()=>setactivequestionindex(activequestionindex+1)}
   >Next Question</Button>}

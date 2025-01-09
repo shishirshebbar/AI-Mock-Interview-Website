@@ -10,6 +10,7 @@ import { chatSession } from '@/utils/GeminiAI'
 import { UserAnswer } from '@/utils/dbschema'
 import { useUser } from '@clerk/nextjs'
 import moment from 'moment'
+import { db } from '@/utils/database'
 
 
 function RecordAnswer({ mockquestion,activequestionindex ,interviewdata}) {

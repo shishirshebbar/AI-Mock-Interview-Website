@@ -61,7 +61,7 @@ function Addnewinterview() {
         console.log("Inserted ID: ",dbresponse)
         if(dbresponse){
             setopendialog(false);
-            router.push('/Dashboard/interview'+dbresponse[0]?.mockId);
+            router.push('/Dashboard/interview/'+dbresponse[0]?.mockId);
         }
     }
     else{
@@ -87,10 +87,10 @@ function Addnewinterview() {
 
     return (
         <div>
-            <div className='p-8 border rounded-lg bg-secondary hover:scale-105 hover:shadow-md cursor-pointer transition-all'
+            <div className='p-8 border rounded-lg bg-blue-700 hover:scale-105 hover:shadow-md cursor-pointer transition-all'
                 onClick={() => setopendialog(true)}>
-                <h2 className='text-lg text-center'>
-                    +Add new
+                <h2 className='text-lg text-center text-red-100'>
+                Start your journey by participating in a mock interview
                 </h2>
             </div>
             <Dialog open={opendialog} onClose={() => setopendialog(false)}>

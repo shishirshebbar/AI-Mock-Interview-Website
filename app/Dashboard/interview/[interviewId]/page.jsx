@@ -58,11 +58,11 @@ function Interview({ params }) {
             <p>Loading interview details...</p>
           )}
           </div>
-          <div className='p-5 rounded-lg border bg-yellow-200 border-yellow-300'>
-            <h2  className='flex gap-2 items-center text-yellow-900'>
+          <div className='p-5 rounded-lg border bg-blue-200 border-blue-300'>
+            <h2  className='flex gap-2 items-center text-blue-900'>
               <Lightbulb/>
               <strong>Note: </strong></h2>
-              <h2 className='mt-3 text-yellow-700'>Enable webcam and microphone to start your AI-powered mock interview. Practice your interview skills with real-time feedback and analysis. Get personalized insights to improve your answers and body language. Simulate various interview scenarios tailored to your job role. Gain confidence with our AI-driven performance metrics. Enhance your preparation with industry-specific mock interviews.</h2>
+              <h2 className='mt-3 text-blue-700'>Enable webcam and microphone to start your AI-powered mock interview. Practice your interview skills with real-time feedback and analysis. Get personalized insights to improve your answers and body language. Simulate various interview scenarios tailored to your job role. Gain confidence with our AI-driven performance metrics. Enhance your preparation with industry-specific mock interviews.</h2>
 
             
           </div>
@@ -72,10 +72,11 @@ function Interview({ params }) {
           <Webcam
             onUserMedia={() => setWebcamenable(true)}
             onUserMediaError={() => setWebcamenable(false)}
+            
             mirrored={true}
             style={{
               height: 300,
-              width: 300,
+              width: 800,
             }}
           />
         ) : (

@@ -23,7 +23,7 @@ function Interviewcard({interview}) {
           </h2>
 
 
-        <h2 className='text-xs text-gray-800'>Created at:{interview.createdAt}</h2>
+        <h2 className='text-xs text-gray-800'>Created at: {interview.createdAt}</h2>
         <div className='flex justify-between mt-3 gap-5'>
         
         <Button size="sm" className="w-full "
@@ -31,7 +31,7 @@ function Interviewcard({interview}) {
        
         
         <Button className="w-full" size="sm"
-        onClick={onclick}>Start</Button>
+        onClick={onclick}>Retake the interview</Button>
         </div>
     </div>
   )
