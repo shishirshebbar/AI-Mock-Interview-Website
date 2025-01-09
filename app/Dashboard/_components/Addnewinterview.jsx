@@ -93,7 +93,7 @@ function Addnewinterview() {
                 Start your journey by participating in a mock interview
                 </h2>
             </div>
-            <Dialog open={opendialog} onClose={() => setopendialog(false)}>
+            <Dialog open={opendialog} onClose={() => setopendialog(false)} >
 
                 <DialogContent className="max-w-2xl">
                     <DialogHeader>
