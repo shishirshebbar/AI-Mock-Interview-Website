@@ -13,22 +13,15 @@
 
 ## Technologies Used
 
-### Frontend
-- **Next.js**: A powerful React framework that enables server-side rendering, static site generation, and API routes for a seamless development experience.  
-- **JavaScript**: The primary language for building interactive and dynamic components.  
-- **TailwindCSS**: A utility-first CSS framework that makes it easy to design responsive and modern UIs with minimal effort.  
-- **shadcn/ui**: A component library built with accessibility and design consistency in mind, providing pre-built and customizable UI components.  
-
-### Authentication
-- **Clerk**: A robust authentication and user management solution that simplifies handling login, signup, and session management processes.  
-
-### Backend
-- **Drizzle ORM**: A modern and lightweight TypeScript ORM for managing database schemas and interactions with a focus on type safety and performance.  
-- **Gemini API**: A reliable API integration that powers the AI-driven interview simulations, leveraging state-of-the-art AI technologies to provide a realistic mock interview experience.  
-
-### Database
-- **PostgreSQL**: A powerful, open-source, object-relational database system renowned for its reliability, scalability, and support for complex queries and operations.  
+- **Next.js**: Forms the core of the platform, handling both frontend and backend development. It enables server-side rendering and API routes for a fast and responsive user experience.  
+- **JavaScript**: Used to develop interactive frontend components and manage application logic throughout the platform.  
+- **TailwindCSS**: Enables efficient and responsive styling, ensuring the UI is modern, consistent, and mobile-friendly.  
+- **shadcn/ui**: Provides ready-made, customizable UI components, ensuring a seamless and accessible user interface across the platform.  
+- **Clerk**: Manages user authentication and profile handling, enabling secure login, signup, and session management for users.  
+- **Drizzle ORM**: Handles interactions with the database, including schema management and querying, with a focus on performance and type safety.  
+- **Gemini API**: Powers the AI-driven interview simulations, generating realistic questions, analyzing user responses, and delivering personalized feedback.  
+- **PostgreSQL**: Acts as the central database, storing user data, interview session records, and performance analytics reliably and securely.  
 
 ---
 
-MockAi is built with a focus on providing a seamless user experience, robust performance, and cutting-edge AI capabilities to help users prepare effectively for their next big interview.
+**MockAi** is built to provide users with a cutting-edge tool to prepare for their interviews confidently, combining the power of AI and modern web technologies to deliver an exceptional user experience.
