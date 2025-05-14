@@ -4,9 +4,11 @@ import { useRouter } from "next/navigation";
 
 export default function Home() {
   const router = useRouter();
-  const onclick = () => {
-    router.push('/Dashboard');
-  };
+ const onclick = () => {
+  console.log("Button clicked!");
+  router.push('/Dashboard');
+  console.log("router.push called for /Dashboard");
+};
 
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 p-5">

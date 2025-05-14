@@ -4,7 +4,13 @@ import React from 'react';
 
 function Questions({ mockquestion,activequestionindex }) {
     const questions = Array.isArray(mockquestion) ? mockquestion : [];
-  
+  if (!mockquestion || questions.length === 0) {
+    return (
+      <div className="p-5 border rounded-lg my-10">
+        <p>Loading questions...</p>
+      </div>
+    );
+  }
     const textToSpeech=(text)=>{
       if('speechSynthesis' in window){
         const speech  = new SpeechSynthesisUtterance(text);
